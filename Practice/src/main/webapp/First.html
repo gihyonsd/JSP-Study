@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<title>Form Design</title>
+<style>
+body {
+	background-color: black;
+}
+
+.container {
+	margin: 0 auto;
+	width: 250px;
+	height: 320px;
+	background-color: #262F40;
+	border-radius: 1%;
+}
+
+.box1 {
+	position: relative;
+	top: 20px;
+	left: 10px;
+}
+
+.box1 label {
+	color: #CED4E1;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.box1 input {
+	position: relative;
+	top: 5px;
+	width: 225px;
+	height: 30px;
+	background-color: #4C5564;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: #9DA7B3;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.box2 {
+	position: relative;
+	top: 120px;
+	left: 10px;
+}
+
+.box2 label {
+	color: #CED4E1;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.box2 input {
+	position: relative;
+	top: 5px;
+	width: 225px;
+	height: 30px;
+	background-color: #4C5564;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	color: #9DA7B3;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.box3 {
+	position: relative;
+	top: 135px;
+	left: 10px;
+}
+
+.box3 label {
+	color: #CED4E1;
+	font-size: 1.3em;
+}
+
+.box3 select {
+	background-color: #4C5564;
+	border: none;
+	outline: none;
+	color: #9DA7B3;
+	width: 50px;
+	height: 30px;
+	border-radius: 5px;
+}
+</style>
+</head>
+
+<body>
+	<form action="Second.jsp" method="post">
+		<div class="container">
+			<div class="box1">
+				<label for="name">Full Name</label><br> <input type="text"
+					name="name" id="name" placeholder="e.g.John Doe"><br>
+			</div>
+			<div class="box2">
+				<label for="number">Phone</label><br> <input type="text"
+					name="number" id="number" placeholder="(+1)598 ____ ____"><br>
+			</div>
+			<div class="box3">
+				<label for="csc">csc</label><br> <select name="combobox">
+					<option value="korean">+82</option>
+					<option value="usa">+1</option>
+					<option value="china">+86</option>
+				</select> <input type="submit" value="전송">
+
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>
