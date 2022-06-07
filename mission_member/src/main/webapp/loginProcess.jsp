@@ -29,6 +29,7 @@
 		
 		if(rs.next() && pass.equals(rs.getString("pass"))) {
 			session.setAttribute("sessionid", id);
+			session.setAttribute("level", rs.getInt("level"));
 			response.sendRedirect("memList.jsp");
 			return;
 		} else {
