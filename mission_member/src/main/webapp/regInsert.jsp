@@ -1,12 +1,13 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
-<%@ page import="java.util.Date" %>
+<%@ page import="java.util.Date" %> 
 <%@ page import="java.text.SimpleDateFormat" %>
 <%
-	Date nowTime = new Date();
-	SimpleDateFormat st = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-	String regdate = st.format(nowTime);
+	Date nowTime = new Date();//date객체를 이용해 현재 시간 nowTime으로 받아옴
+	SimpleDateFormat st = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss"); //SimpleDateFormat 클래스로 date는 "yyyy/MM/dd" time은 "hh:mm:ss"로 받아옴
+	String regdate = st.format(nowTime); //regdate는 현재 시간 
 	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("id");
 	String pass = request.getParameter("pass");
@@ -16,16 +17,14 @@
 	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
-	
 	String driver = "org.mariadb.jdbc.Driver";
 	String url = "jdbc:mysql://localhost:3306/testdb3";
 	try {
 		Class.forName(driver);
-		conn = DriverManager.getConnection(url,"java","java");
-		
+		conn = DriverManager.getConnection(url,"java","java");		
 		String sql = "INSERT INTO member(level, id, pass, email, phone, birth, regdate) VALUES(?,?,?,?,?,?,?)";
 		pstmt = conn.prepareStatement(sql);
-		pstmt.setInt(1, 1);
+		pstmt.setInt(1, 1); //level값은 1로 고정
 		pstmt.setString(2, id);
 		pstmt.setString(3, pass);
 		pstmt.setString(4, email);

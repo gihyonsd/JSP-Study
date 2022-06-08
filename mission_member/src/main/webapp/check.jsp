@@ -27,12 +27,12 @@
 	<%if(rs.next()) { %>
 	<script>
 	alert('중복입니다.')
-	location.href = "regStep1.jsp";	
+	location.href = "regStep1.jsp"
 	</script>
 	<% } else { %>
 	<script>
 	alert('사용가능한 아이디 입니다.')
-	location.href = "regStep1.jsp";	
+	location.href = "regStep1.jsp"
 	</script>
 	<% } %>
 </body>

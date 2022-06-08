@@ -4,10 +4,10 @@
 <%
 String sessionid;
 int level;
-if (session.getAttribute("sessionid") != null) {
-	sessionid = (String) session.getAttribute("sessionid");
-	level = (int) session.getAttribute("level");
-	out.println("id : <strong>" + sessionid + "</strong>님 반갑습니다.");
+if (session.getAttribute("sessionid") != null) { //세션에서 받아온 id가 null이 아니면
+	sessionid = (String) session.getAttribute("sessionid"); //sessionid에 id값 저장
+	level = (int) session.getAttribute("level"); //level에 level값 저장
+	out.println("id : <strong>" + sessionid + "</strong>님 반갑습니다."); 
 } else {
 	response.sendRedirect("login.jsp");
 	return;
@@ -36,7 +36,7 @@ try {
 </head>
 <body>
 	<%
-	if (level == 5) {
+	if (level == 5) { //loginProcess에서 세션으로 받아온 level이 5라면 관리자모드 이므로 테이블 보여줌
 	%>
 	<table border="1">
 		<caption>회원목록</caption>
@@ -74,7 +74,7 @@ try {
 		</tbody>
 	</table>
 	<%
-	} else {
+	} else { //아니면 그냥 환영합니다 띄움
 	%>
 	<h3>환영합니다!</h3>
 	<%

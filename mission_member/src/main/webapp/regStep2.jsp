@@ -35,7 +35,7 @@
 			</table>
 		</fieldset>
 		<button type = "reset">다시입력</button>
-		<button onclick ="javascript:histody.back();">이전단계</button>
+		<button onclick ="location.href='regStep1.jsp'">이전단계</button>
 		<button onclick ="return formCheckreg2();">다음단계</button>
 	</form>
 	<script src = "script.js"></script>

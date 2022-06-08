@@ -3,9 +3,9 @@
 <%@ page import="java.sql.*"%>
 
 <%
-	if((session).getAttribute("sessionid") != null) {
-		session.removeAttribute("sessionid");
-		response.sendRedirect("login.jsp");
+	if((session).getAttribute("sessionid") != null) { //세션 id가 null이 아니면
+		session.removeAttribute("sessionid"); //세션에서 삭제
+		response.sendRedirect("login.jsp"); //login.jsp로 이동
 		return;
 	}
 %>
