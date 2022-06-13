@@ -29,10 +29,10 @@ public class JdbcUtil {
 	
 	private JdbcUtil() {}
 	
-	public JdbcUtil getInstance() {
+	public static JdbcUtil getInstance() {
 		return instance;
 	}
 	public Connection getConnection() throws SQLException {
 		return ds.getConnection(); //풀에서 커넥션 반환
 	}
-}
+} 
