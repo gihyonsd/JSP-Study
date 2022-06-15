@@ -203,7 +203,7 @@ public class BoardDAO {
 			if(rs.next())num =rs.getInt(1)+1;
 			else num=1;
 			sql="update board set BOARD_RE_SEQ=BOARD_RE_SEQ+1 where BOARD_RE_REF=? ";
-			sql+="and BOARD_RE_SEQ>?";
+			sql+="and BOARD_RE_SEQ=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1,re_ref);
 			pstmt.setInt(2,re_seq);

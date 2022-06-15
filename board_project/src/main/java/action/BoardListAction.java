@@ -16,7 +16,11 @@ public class BoardListAction implements Action {
 		int page = 1;
 		int limit = 10;
 		
-		if(request.getParameter("page") != null) {
+		
+		if(request.getParameter("page") == null) {
+			page = 1;;
+		}
+		else if(request.getParameter("page") != null) {
 			page = Integer.parseInt(request.getParameter("page"));
 		}
 		

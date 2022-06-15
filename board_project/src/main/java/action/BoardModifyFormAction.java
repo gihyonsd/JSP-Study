@@ -9,7 +9,6 @@ import vo.BoardBean;
 
 public class BoardModifyFormAction implements Action {
 
-	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		int board_num = Integer.parseInt(request.getParameter("board_num"));
