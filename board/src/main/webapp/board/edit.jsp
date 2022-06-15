@@ -9,8 +9,9 @@
 <jsp:setProperty name="vo" property="*"/>
 
 <%
-	dao.insert(vo);
+	dao.update(vo);
+	pageContext.setAttribute("vo", vo);
 
 	//response.sendRedirect(request.getContextPath() + "/board/list.jsp");
 %>
-<c:redirect url="${pageContext.request.contextPath}/list.jsp"></c:redirect>
+<c:redirect url="${pageContext.request.contextPath}/boardDetail.jsp?num=${vo.num}"></c:redirect>
