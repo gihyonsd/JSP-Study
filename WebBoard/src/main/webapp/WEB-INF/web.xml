@@ -21,4 +21,9 @@
   	<param-name>OraclePasswd</param-name>
   	<param-value>java</param-value>
   </context-param>
+  
+  <!-- 세션 유지 시간 설정 -->
+  <session-config>
+  	<session-timeout>10</session-timeout>
+  </session-config>
 </web-app>
